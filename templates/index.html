@@ -1,0 +1,12 @@
+{% extends "nav.html" %}
+{% block main %}
+        <div class="panel panel-default">
+		    <div class="panel-body">
+			    <ul class="list-group">
+                    {% for page in pages %}
+			            <li class="list-group-item title"><a href="{% url 'page' page.pk %}"><h4 style="opacity: .7">{{ page.title }}</h4></a></li>
+                    {% endfor %}
+			    </ul>
+            </div>
+        </div>
+{% endblock %}
